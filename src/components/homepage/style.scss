@@ -1,0 +1,161 @@
+.homepage   {
+    height: 100vh;
+    background-image: url('../../assets/279547.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .banner-text{
+        width: 350px;
+        position: absolute;
+        top: 25%;
+        color: white;
+        left: 10%;
+        h4{
+            font-size: 3.5em;
+            font-family: 'Kalam', cursive;
+        }
+        p{
+            font-size: 1.2em;
+            margin: 2px;
+        }
+        .start{
+            padding: 8px 60px;
+            margin-top: 12px;
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            font-weight: 400;
+            font-size: 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            &:hover{
+                color: black;
+                background-color: white;
+            }
+        }
+
+    }
+}
+
+.cause-section{
+    text-align: center;
+    // height: 200px;
+    background: url('https://wallpaperaccess.com/full/38598.jpg');
+    background-attachment: fixed;
+    padding-bottom: 40px;
+    .cause-test-section{
+        width: 60%;
+        margin: 0 auto;
+        h4{
+            font-size: 2.2em;
+            font-family: 'Kalam', cursive;
+            color: white;
+        }
+        p{
+            font-size: 1.4em;
+            padding: 20px;
+            color: white;
+            font-weight: 600;
+            font-family: 'Kalam', cursive;
+
+        }
+        .start-button{
+            padding: 8px 40px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.features-section{
+    text-align: center;
+    padding: 40px;
+    .silent, .features{
+        font-size: 2.2em;
+        color: #503D3F;
+        font-weight: 600;
+        font-family: 'Kalam', cursive;
+    }
+    .features{
+        margin-left: 10px;
+        color: #615756;
+    }
+    h4{
+        font-family: 'Kalam', cursive;
+        color: #615756;
+    }
+    p{
+        // font-weight: 900;
+        // font-family: 'Kalam', cursive;
+        color: #503D3F;
+    }
+    i{
+        font-size: 3.5em;
+        color: #E63462;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+}
+
+.footer{
+    text-align: center;
+    background: #f1f1f1;
+    .title{
+        padding-top: 40px;
+        .contact, .info{
+            font-size: 2.2em;
+            color: #0b0e28;
+            font-weight: 600;
+            font-family: 'Kalam', cursive;
+        }
+        .info{
+            margin-left: 10px;
+            color: #de3b38;
+        }
+    }
+    h6{
+        font-size: 18px;
+        font-weight: 400;
+        color: #0b0f28;
+        font-family: 'Kalam', cursive;
+        padding-bottom: 10vh;
+    }
+    h5{
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: 900;
+        font-family: 'Kalam', cursive;
+        color: #de3937;
+    }
+    .lower-footer{
+        h5,h6{
+            font-size: 18px;
+        }
+        .social-connect {
+            margin-top: 60px;
+            font-size: 30px;
+            color: #de3937;
+            border-radius: 50%;
+            i{
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .homepage-wrapper{
+        .banner-text{
+            left: 5%;
+            top: 20%;
+            h4{
+                font-size: 2.5em;
+            }
+            p{
+                font-size: 1em;
+            }
+        }
+    }
+  }
