@@ -1,8 +1,40 @@
 import React from 'react';
-import './style.scss'
+import Login from '../Login';
+import './homepage.scss';
 
 class Homepage extends React.Component{
+
+    constructor(props){
+        super(props);
+        this.state={
+            isModalOpen: false,
+            isLogin: false,
+            isRegister: true
+        };
+    };
+
+    loginModal = () =>{
+        this.setState(prevState => ({
+            isModalOpen: !prevState.isModalOpen
+        }));
+    };
+
+    loginToggle = () =>{
+        this.setState({
+            isLogin: true,
+            isRegister: false
+        });
+    }
+
+    registerToggle = () =>{
+        this.setState({
+            isLogin: false,
+            isRegister: true
+        });
+    }
+
     render(){
+        const { isModalOpen, isLogin, isRegister } = this.state;
         return(
             <div className="homepage-wrapper">
                 <div className="homepage">
@@ -10,7 +42,7 @@ class Homepage extends React.Component{
                         <h4>Diario</h4> 
                         <p>Your private, 100% customizable dairy.</p>
                         <p> Loved by writers around the world.</p>  
-                        <button className="start">Get Started</button> 
+                        <button className="start" onClick={this.loginModal}>Get Started</button> 
                     </div>  
                 </div>
                 <div className="cause-section">
@@ -81,6 +113,15 @@ class Homepage extends React.Component{
                         <div class=" col-lg-5 offset-lg-1 social-connect"><i class="fab fa-facebook" aria-hidden="true"></i><i class="fab fa-twitter" aria-hidden="true"></i></div>
                     </div>
                 </div>
+                {isModalOpen === true && 
+                    <Login 
+                        loginModal={this.loginModal} 
+                        loginToggle={this.loginToggle}
+                        registerToggle={this.registerToggle}
+                        isLogin={isLogin}
+                        isRegister={isRegister}
+                    />
+                }
             </div>    
         )
     }
