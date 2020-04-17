@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/.github.io/Diario/static/css/main.2c216b82.chunk.css",
+    "main.js": "/.github.io/Diario/static/js/main.3d393d2f.chunk.js",
+    "main.js.map": "/.github.io/Diario/static/js/main.3d393d2f.chunk.js.map",
+    "runtime-main.js": "/.github.io/Diario/static/js/runtime-main.9b5104fd.js",
+    "runtime-main.js.map": "/.github.io/Diario/static/js/runtime-main.9b5104fd.js.map",
+    "static/js/2.c9a924be.chunk.js": "/.github.io/Diario/static/js/2.c9a924be.chunk.js",
+    "static/js/2.c9a924be.chunk.js.map": "/.github.io/Diario/static/js/2.c9a924be.chunk.js.map",
+    "index.html": "/.github.io/Diario/index.html",
+    "precache-manifest.3d2e52e5c83fcfa4059b06099b20b53c.js": "/.github.io/Diario/precache-manifest.3d2e52e5c83fcfa4059b06099b20b53c.js",
+    "service-worker.js": "/.github.io/Diario/service-worker.js",
+    "static/css/main.2c216b82.chunk.css.map": "/.github.io/Diario/static/css/main.2c216b82.chunk.css.map",
+    "static/js/2.c9a924be.chunk.js.LICENSE.txt": "/.github.io/Diario/static/js/2.c9a924be.chunk.js.LICENSE.txt",
+    "static/media/style.scss": "/.github.io/Diario/static/media/279547.df3dd19d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9b5104fd.js",
+    "static/js/2.c9a924be.chunk.js",
+    "static/css/main.2c216b82.chunk.css",
+    "static/js/main.3d393d2f.chunk.js"
+  ]
+}
