@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import logo from '../../assets/web-logo.png';
 import './login.scss';
 
 class Login extends Component {
@@ -14,7 +15,7 @@ class Login extends Component {
                 <div className="close" onClick={loginModal}></div>
                     <div className="login-wrapper">
                         <div className="logo">
-                            
+                            <img src={logo} alt="logo" />
                         </div>
                         <div className="form-wrapper">
                             <h2><span onClick={registerToggle}>Register</span> | <span onClick={loginToggle}>Login</span></h2>

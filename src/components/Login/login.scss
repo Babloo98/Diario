@@ -102,6 +102,7 @@ h2{
     }
     .login-wrapper{
         display: flex;
+        height: 100%;
     }
     
     .form-wrapper{
@@ -110,6 +111,10 @@ h2{
     
     .logo{
         width: 40%;
+        align-self: center;
+        img{
+            transform: scale(0.8);
+        }
     }
 
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -148,4 +153,8 @@ button {
       background-color: #ffffff;
       color: #000000;
     }
+}
+
+img{
+    width: 100%;
 }
