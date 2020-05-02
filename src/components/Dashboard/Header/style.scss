@@ -1,0 +1,31 @@
+.Header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    height: 35px;
+    padding: 20px;
+    z-index: 1;
+    box-shadow: 0 4px 6px -6px black;
+    .logo{
+        height: 20px;
+        width: 50px;
+        .logo-img{
+            width: 100%;
+        }
+    }
+    .notification-bar{
+        flex-grow: 2;
+        display: flex;
+        justify-content: flex-end;
+        .icons{
+            color: #0e213f;
+            font-size: 20px;
+            margin-left: 25px;
+            padding-right: 50px;
+            padding-left: 30px;
+            line-height: 1.5;
+        }
+    }
+}
