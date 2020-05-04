@@ -2,6 +2,7 @@ import React from 'react';
 import './style.scss';
 import InputBox from '../../common/InputBox/index';
 import logo from '../../../assets/diario-logo.png';
+import avatar from '../../../assets/avatar.png';
 
 class Header extends React.Component{
     render(){
@@ -17,7 +18,9 @@ class Header extends React.Component{
                         type="text"
                         onChange={this.handleChange}
                     />  
-                    <a href="#home"><i className="fa fa-cog icons"></i></a>
+                    <div className="profile">
+                        <img src={avatar} alt="PP" />
+                    </div>
                </div>
             </div>
         )

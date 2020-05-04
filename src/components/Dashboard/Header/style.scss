@@ -2,23 +2,22 @@
     background-color: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     position: fixed;
-    height: 35px;
-    padding: 20px;
+    padding: 10px 20px;
     z-index: 1;
     box-shadow: 0 4px 6px -6px black;
     .logo{
-        height: 20px;
         width: 50px;
         .logo-img{
             width: 100%;
         }
     }
     .notification-bar{
-        flex-grow: 2;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
+        align-items: center;
         .icons{
             color: #0e213f;
             font-size: 20px;
@@ -27,5 +26,24 @@
             padding-left: 30px;
             line-height: 1.5;
         }
+        .form-control{
+            margin-bottom: 0;
+        }
+        .form-group{
+            width: 60%;
+        }
+        @media only screen and (max-width: 767px){
+            width: 70%;
+        }
+        @media only screen and (min-width: 768px){
+            width: 30%;
+        }
+    }
+    .profile{
+        width: 55px;
+        border-radius: 50%;
+        overflow: hidden;
+        font-size: 0;
+        cursor: pointer;
     }
 }
