@@ -7,11 +7,11 @@ import Header from './Header/index'
 class Dashboard extends Component {
   state = {
     adminOption: [
-      {label: HomeIcon, url:'/dashboard/home', toolTipText: 'HOME'},
-      {label: HomeIcon, url:'/dashboard/diaries', toolTipText: 'DIARY'},
-      {label: HomeIcon, url:'/dashboard/filter', toolTipText: 'FILTER'},
+      {label: HomeIcon, url:'/Dashboard/home', toolTipText: 'HOME'},
+      {label: HomeIcon, url:'/Dashboard/diaries', toolTipText: 'DIARY'},
+      {label: HomeIcon, url:'/Dashboard/filter', toolTipText: 'FILTER'},
     ],
-      isSelected: '/dashboard/home',
+      isSelected: '/Dashboard/home',
   };
 
   selectedTab = (selectedUrl) => {
@@ -48,7 +48,7 @@ class Dashboard extends Component {
             </div>
             <div>
               <div className="">
-                {isSelected === 'Home' && <Home />}
+                {isSelected === '/Dashboard/home' && <Home />}
               </div>
             </div>
           </div>

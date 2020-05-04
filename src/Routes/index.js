@@ -11,22 +11,32 @@ const routes = [
     },   
     {
       component: Dashboard,
-      path : "/dashboard/home",
-      exact : true,
-      restricted: false,
-    }, 
-    {
-      component: Dashboard,
-      path : "/dashboard/diaries",
-      exact : true,
-      restricted: false,
-    }, 
-    {
-      component: Dashboard,
-      path : "/dashboard/filter",
-      exact : true,
-      restricted: false,
-    }, 
+      routes: [
+        {
+          path : "/Dashboard",
+          exact : true,
+          component : Dashboard
+        }
+      ]
+    }
+    // {
+    //   component: Dashboard,
+    //   path : "/dashboard/home",
+    //   exact : true,
+    //   restricted: false,
+    // }, 
+    // {
+    //   component: Dashboard,
+    //   path : "/dashboard/diaries",
+    //   exact : true,
+    //   restricted: false,
+    // }, 
+    // {
+    //   component: Dashboard,
+    //   path : "/dashboard/filter",
+    //   exact : true,
+    //   restricted: false,
+    // }, 
   ];
 
   export default routes;
