@@ -7,11 +7,11 @@ import Header from './Header/index'
 class Dashboard extends Component {
   state = {
     adminOption: [
-      {label: HomeIcon, url:'Home', toolTipText: 'HOME'},
-      {label: HomeIcon, url:'Diaries', toolTipText: 'DIARY'},
-      {label: HomeIcon, url:'Filter', toolTipText: 'FILTER'},
+      {label: HomeIcon, url:'/dashboard/home', toolTipText: 'HOME'},
+      {label: HomeIcon, url:'/dashboard/diaries', toolTipText: 'DIARY'},
+      {label: HomeIcon, url:'/dashboard/filter', toolTipText: 'FILTER'},
     ],
-      isSelected: 'Home',
+      isSelected: '/dashboard/home',
   };
 
   selectedTab = (selectedUrl) => {
