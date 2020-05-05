@@ -84,9 +84,13 @@
 }
 
 .profile{
-    width: 55px;
+    width: 40px;
     border-radius: 50%;
+    border: 1px solid red;
     overflow: hidden;
-    font-size: 0;
     cursor: pointer;
+    i{
+        padding: 5px;
+        font-size: 35px;
+    }
 }

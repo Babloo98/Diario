@@ -32,7 +32,7 @@ class Header extends React.Component{
                             onChange={this.handleChange}
                         />  
                         <div className="profile" onClick={this.showProfile}>
-                            <img src={avatar} alt="PP" />
+                        <i class="icon-user"></i>
                         </div>
                     </div>
                 </div>

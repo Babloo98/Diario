@@ -5,7 +5,7 @@ class Home extends React.Component{
     render(){
         return(
             <div className="Home-wrapper">
-                <p>Home wrapper</p>
+                <textarea placeholder="Textarea"></textarea>
             </div>
         )
     }
