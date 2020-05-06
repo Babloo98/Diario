@@ -28,6 +28,7 @@
         }
         .form-control{
             margin-bottom: 0;
+            width: 100%;
         }
         .form-group{
             width: 60%;
@@ -45,8 +46,8 @@
     position: absolute;
     width: 190px;
     height: 245px;
-    top: 86px;
-    right: 12px;
+    top: 84px;
+    right: 8px;
     box-shadow: 1px 1px 10px 0px #808080;
     border-radius: 5px;
     .modal{
@@ -84,13 +85,19 @@
 }
 
 .profile{
-    width: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    border: 1px solid red;
+    border: 1px solid #2f2f2f;
     overflow: hidden;
     cursor: pointer;
-    i{
-        padding: 5px;
+    .icon-user{
+        position: relative;
         font-size: 35px;
+        &::before{
+            position: absolute;
+            top: 2px;
+            left: 4px;
+        }
     }
 }
