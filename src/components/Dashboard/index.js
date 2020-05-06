@@ -40,17 +40,13 @@ class Dashboard extends Component {
         <>
         <Header/>
         <div className="admin-wrapper">
-          <div className="row">
-            <div className="dashboard-options">
-              <ul>
-                {optionsList}
-              </ul>
-            </div>
-            <div>
-              <div className="">
-                {isSelected === '/Dashboard/home' && <Home />}
-              </div>
-            </div>
+          <div className="dashboard-options">
+            <ul>
+              {optionsList}
+            </ul>
+          </div>
+          <div className="home-wrapper">
+            {isSelected === '/Dashboard/home' && <Home />}
           </div>
         </div>
         </>

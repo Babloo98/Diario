@@ -1,37 +1,38 @@
 .admin-wrapper{
-    .row{
-        .dashboard-options{
-            margin-top: 75px;
-            background-color: #446495;
-            color: #c8d1e0;
-            height: 100vh;
-            position: fixed;
-            width: 80px;
-            z-index: 1;
+    .dashboard-options{
+        margin-top: 74px;
+        background-color: #446495;
+        color: #c8d1e0;
+        height: 100vh;
+        position: fixed;
+        width: 80px;
+        z-index: 1;
+        padding: 0px;
+        max-width: 80px;
+        ul{
+            list-style-type: none;
+            cursor: pointer;
             padding: 0px;
-            max-width: 80px;
-            ul{
-                list-style-type: none;
-                cursor: pointer;
-                padding: 0px;
-                text-align: center;
-                li{
-                    text-transform: uppercase;
-                    padding: 20px;
-                    &.active {
-                        color:white;
-                        background-color: #3a5a88
-                    };
-                    img{
-                        width: 80%;
-                    }
+            text-align: center;
+            li{
+                text-transform: uppercase;
+                padding: 20px;
+                &.active {
+                    color:white;
+                    background-color: #3a5a88
+                };
+                img{
+                    width: 80%;
                 }
             }
         }
-        .option-content{
-            padding: 20px;
-            width: 100%;
-            background-color: #f0f4fd;
-        }
+    }
+    .option-content{
+        padding: 20px;
+        width: 100%;
+        background-color: #f0f4fd;
+    }
+    .home-wrapper{
+        padding: 100px 20px 0 100px;
     }
 }
