@@ -1,6 +1,6 @@
 import Homepage from '../components/homepage/index';
 import Dashboard from '../components/Dashboard/index';
-import Home from '../components/Dashboard/Home/index'
+// import Home from '../components/Dashboard/Home/index'
 
 const routes = [
     {
@@ -11,7 +11,7 @@ const routes = [
     },   
     {
       component: Dashboard,
-      restricted: false,
+      restricted: true,
       routes: [
         {
           path : "/Dashboard",

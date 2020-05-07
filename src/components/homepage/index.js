@@ -56,34 +56,34 @@ class Homepage extends React.Component{
                     <span className="silent">Silent</span><span className="features">Features</span>
                     <div className="row">
                         <div className="col-lg-4">
-                            <i class="fas fa-lock"></i>
+                            <i className="fas fa-lock"></i>
                             <h4>100% Private</h4>
                             <p>Designed to focus on privacy, your entries are totally private by default!</p>
                         </div>
                         <div className="col-lg-4">
-                            <i class="fas fa-mobile-alt"></i>
+                            <i className="fas fa-mobile-alt"></i>
                             <h4>Available Everywhere</h4>
                             <p>Enjoy Penzu on the move. Available for iOS and Android and totally free!</p>
                         </div>
                         <div className="col-lg-4">
-                            <i class="far fa-clock"></i>
+                            <i className="far fa-clock"></i>
                             <h4>Never Forget to Write</h4>
                             <p>Custom email reminders help you make sure you never forget to write.</p>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-lg-4">
-                            <i class="fas fa-lock"></i>
+                            <i className="fas fa-lock"></i>
                             <h4>100% Private</h4>
                             <p>Designed to focus on privacy, your entries are totally private by default!</p>
                         </div>
                         <div className="col-lg-4">
-                            <i class="fas fa-mobile-alt"></i>
+                            <i className="fas fa-mobile-alt"></i>
                             <h4>Available Everywhere</h4>
                             <p>Enjoy Penzu on the move. Available for iOS and Android and totally free!</p>
                         </div>
                         <div className="col-lg-4">
-                            <i class="far fa-clock"></i>
+                            <i className="far fa-clock"></i>
                             <h4>Never Forget to Write</h4>
                             <p>Custom email reminders help you make sure you never forget to write.</p>
                         </div>
@@ -110,7 +110,7 @@ class Homepage extends React.Component{
                             <h5>Copyright ©2019 All rights reserved</h5>
                             <h6>This template is made with ♡ by Software Revalador</h6>
                         </div>
-                        <div class=" col-lg-5 offset-lg-1 social-connect"><i class="fab fa-facebook" aria-hidden="true"></i><i class="fab fa-twitter" aria-hidden="true"></i></div>
+                        <div className=" col-lg-5 offset-lg-1 social-connect"><i className="fab fa-facebook" aria-hidden="true"></i><i className="fab fa-twitter" aria-hidden="true"></i></div>
                     </div>
                 </div>
                 {isModalOpen === true && 

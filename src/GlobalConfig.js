@@ -1,6 +1,6 @@
 const baseUrl = window.location.origin;
 const index = baseUrl.indexOf(".");
-const url = index === -1 ? "http://localhost:8000" : baseUrl;
+const url = index === -1 ? "https://diario1.free.beeceptor.com" : baseUrl;
 const apiNetworkInterface = {
   development: url
 };
