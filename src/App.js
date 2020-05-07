@@ -9,12 +9,11 @@ import store from "./store";
 class App extends React.Component {
 
   render(){
-    const authed = false;
     const authPath = '/';
     return (
       <Provider store={store}>
         <BrowserRouter>
-            {renderRoutes(routes, authed, authPath)}
+            {renderRoutes(routes, authPath)}
         </BrowserRouter>
       </Provider>
     );
