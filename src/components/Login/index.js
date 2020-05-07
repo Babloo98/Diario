@@ -70,7 +70,7 @@ class Login extends Component {
                             <h2><span onClick={registerToggle}>Register</span> | <span onClick={loginToggle}>Login</span></h2>
                             {isLogin &&
                                 <form className="input-wrapper log" onSubmit={(e)=> this.handleSubmit(e)}>
-                                    <input type="text" name="username" placeholder="Username" onChange={(e)=>this.handleChange(e)}/>
+                                    <input type="text" name="email" placeholder="Email" onChange={(e)=>this.handleChange(e)}/>
                                     <input type="password" name="password" placeholder="Password" onChange={(e)=>this.handleChange(e)}/>
                                     <div className="submit">
                                         <button type="submit">Submit</button>
