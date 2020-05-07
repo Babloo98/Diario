@@ -5,7 +5,7 @@ import { bindActionCreators } from "redux";
 import { loginAction } from "../../Actions/login.action";
 import { get } from "lodash";
 import {Redirect, withRouter} from 'react-router-dom';
-import { setLocalstorage, getLocalstorage } from "../../helper";
+import { setLocalstorage } from "../../helper";
 import './login.scss';
 
 class Login extends Component {
@@ -13,7 +13,7 @@ class Login extends Component {
         super(props);
         this.state = { 
             email: '',
-            phone: '',
+            password: '',
             redirect: false
         };
     }
@@ -28,15 +28,14 @@ class Login extends Component {
     handleSubmit = async (e) => {
         e.preventDefault();
         const{loginAction} = this.props;
-        const {email, phone, redirect} = this.state;
+        const {email, password} = this.state;
         const data = {
             email,
-            number: phone
+            password
         }
         try{
             await loginAction(undefined, data);
             const {loginData} = this.props;
-            console.log('^^',get(loginData, "isAuthenticated"), this.props)
             if(get(loginData, "isAuthenticated") === true){
                 setLocalstorage("user_data", loginData)
                 this.setState({
@@ -72,7 +71,7 @@ class Login extends Component {
                             {isLogin &&
                                 <form className="input-wrapper log" onSubmit={(e)=> this.handleSubmit(e)}>
                                     <input type="text" name="username" placeholder="Username" onChange={(e)=>this.handleChange(e)}/>
-                                    <input type="number" name="phone" placeholder="Number" onChange={(e)=>this.handleChange(e)}/>
+                                    <input type="password" name="password" placeholder="Password" onChange={(e)=>this.handleChange(e)}/>
                                     <div className="submit">
                                         <button type="submit">Submit</button>
                                     </div>

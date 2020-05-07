@@ -12,7 +12,6 @@ export const loginAction = (requestMethod = request, params) => {
     return requestMethod(apiServices.loginForm(params))
       .then(loginResp => {
         const user_data = get(loginResp, "data");
-        console.log('user_data', user_data)
         dispatch({
           type: LOGIN_ACTION.LOGIN_SUCCESS,
           user_data

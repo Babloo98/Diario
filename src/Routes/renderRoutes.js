@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import {getLocalstorage} from "../helper";
 
@@ -12,7 +12,7 @@ const renderRoutes = (routes, authPath, extraProps = {}, switchProps = {}) => ro
             exact={route.exact}
             strict={route.strict}
             render={(props) => {          
-                if( !route.restricted || JSON.parse(localStorage.getItem('user_data')) || route.path == authPath) {
+                if( !route.restricted || getLocalstorage('user_data') || route.path == authPath) {
                     return <route.component {...props} {...extraProps} route={route}/>
                 }
             const redirPath = authPath ? authPath : '/'

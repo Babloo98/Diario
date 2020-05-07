@@ -1,6 +1,5 @@
 import Homepage from '../components/homepage/index';
 import Dashboard from '../components/Dashboard/index';
-// import Home from '../components/Dashboard/Home/index'
 
 const routes = [
     {
