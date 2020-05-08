@@ -3,6 +3,7 @@ import logo from '../../assets/web-logo.png';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { loginAction } from "../../Actions/login.action";
+import { registerAction } from "../../Actions/register.action";
 import { get } from "lodash";
 import {Redirect, withRouter} from 'react-router-dom';
 import { setLocalstorage } from "../../helper";
@@ -14,18 +15,36 @@ class Login extends Component {
         this.state = { 
             email: '',
             password: '',
-            redirect: false
+            redirect: false,
+            regForm: {
+                firstName: '',
+                lastName: '',
+                userName: '',
+                number:'',
+                email: '',
+                password: ''
+            }
         };
     }
 
-    handleChange = (e) => {
+    handleLogin = (e) => {
         e.preventDefault();
         this.setState({
             [e.target.name]: e.target.value
         })
     }
 
-    handleSubmit = async (e) => {
+    handleRegister = (e) => {
+        e.preventDefault();
+        const{regForm} = this.state;
+        const currentUserData = regForm;
+        currentUserData[e.target.name] =  e.target.value;
+        this.setState({
+            regForm: currentUserData
+        })
+    }
+
+    loginSubmit = async (e) => {
         e.preventDefault();
         const{loginAction} = this.props;
         const {email, password} = this.state;
@@ -54,6 +73,26 @@ class Login extends Component {
         }
     }
 
+    registerSubmit = async (e) => {
+        e.preventDefault();
+        const{registerAction} = this.props;
+        const {firstName, lastName, userName, number, email, password} = this.state.regForm;
+        const data = {
+            firstName,
+            lastName,
+            userName,
+            number,
+            email,
+            password,
+        }
+        try{
+            await registerAction(undefined, data);
+        }
+        catch(e){
+            console.log(`Error while loggin in ${e.message}`)
+        }
+    }
+
     render() {
         const { loginModal, loginToggle, isLogin, registerToggle, isRegister, location } = this.props;
         const { from } = location.state || { from: { pathname: '/Dashboard' } };
@@ -69,22 +108,22 @@ class Login extends Component {
                         <div className="form-wrapper">
                             <h2><span onClick={registerToggle}>Register</span> | <span onClick={loginToggle}>Login</span></h2>
                             {isLogin &&
-                                <form className="input-wrapper log" onSubmit={(e)=> this.handleSubmit(e)}>
-                                    <input type="text" name="email" placeholder="Email" onChange={(e)=>this.handleChange(e)}/>
-                                    <input type="password" name="password" placeholder="Password" onChange={(e)=>this.handleChange(e)}/>
+                                <form className="input-wrapper log" onSubmit={(e)=> this.loginSubmit(e)}>
+                                    <input type="text" name="email" placeholder="Email" onChange={(e)=>this.handleLogin(e)}/>
+                                    <input type="password" name="password" placeholder="Password" onChange={(e)=>this.handleLogin(e)}/>
                                     <div className="submit">
                                         <button type="submit">Submit</button>
                                     </div>
                                 </form>
                             }
                             {isRegister && 
-                                <form className="input-wrapper">
-                                    <input type="text" name="username" placeholder="Username" />
-                                    <input type="password" name="password" placeholder="Password" />
-                                    <input type="email" name="email" placeholder="Email" />
-                                    <input type="tel" name="phone" placeholder="Phone" />
-                                    <input type="text" name="state" placeholder="State" />
-                                    <input type="text" name="city" placeholder="City" />
+                                <form className="input-wrapper" onSubmit={(e)=> this.registerSubmit(e)}>
+                                    <input type="text" name="firstName" placeholder="First Name" onChange={(e)=>this.handleRegister(e)}/>
+                                    <input type="text" name="lastName" placeholder="Last Name" onChange={(e)=>this.handleRegister(e)}/>
+                                    <input type="text" name="userName" placeholder="Username" onChange={(e)=>this.handleRegister(e)}/>
+                                    <input type="tel" name="number" placeholder="Phone" onChange={(e)=>this.handleRegister(e)}/>
+                                    <input type="email" name="email" placeholder="Email" onChange={(e)=>this.handleRegister(e)}/>
+                                    <input type="password" name="password" placeholder="Password" onChange={(e)=>this.handleRegister(e)}/>
                                     <div className="submit">
                                         <button type="submit">Submit</button>
                                     </div>
@@ -107,7 +146,8 @@ const mapStateToprops = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({
-        loginAction: loginAction
+        loginAction: loginAction,
+        registerAction
     }, dispatch);
 };
 

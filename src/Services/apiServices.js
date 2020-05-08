@@ -7,9 +7,9 @@ export const loginForm = (data = {}) => ({
   data: { ...data }
 });
 
-// export const yogaTable = (data = {}) => ({
-//   method: "GET",
-//   headers: GlobalConfig.getHeaders(["JSON"]),
-//   url: GlobalConfig.getApiUrlFromRoot("/yogaStudio"),
-//   data: { ...data }
-// });
+export const registerForm = (data = {}) => ({
+  method: "POST",
+  headers: GlobalConfig.getHeaders(["JSON"]),
+  url: GlobalConfig.getApiUrlFromRoot("/register"),
+  data: { ...data }
+});

@@ -11,3 +11,10 @@ export const LOGIN_ACTION = {
     LOADING: "LOADING",
     CLEAR: "CLEAR"
   };
+
+  export const REG_ACTION = {
+    REG_START: "REG_START",
+    REG_SUCCESS: "REG_SUCCESS",
+    REG_FAILURE: "REG_FAILURE",
+    REG_CLEAR: "REG_CLEAR"
+  };
