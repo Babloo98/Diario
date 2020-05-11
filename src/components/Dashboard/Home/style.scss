@@ -27,8 +27,28 @@
     .diary-content{
         margin-top: 8px;
         height: calc(100% - 100px);
+        border: 1px solid #757373;
         @media only screen and (max-width: 767px){
             height: calc(100% - 140px);
+        }
+        >div{
+            height: 100%;
+            >div{
+                &:first-child{
+                    border-bottom: 1px solid #757373;
+                    @media only screen and (max-width: 910px){
+                        display: none;
+                    }
+                }
+                &:nth-child(2){
+                    @media only screen and (max-width: 910px){
+                        height: 100%;
+                    }
+                    @media only screen and (min-width: 911px){
+                        height: calc(100% - 78px);
+                    }
+                } 
+            }
         }
     }
     .diary-rating{
@@ -38,3 +58,13 @@
         }
     }
 }
+
+.ProseMirror{
+    p.empty-node{
+        &:first-child{
+            &::before{
+                content: 'ENTER YOUR THOUGHTS\2026';
+            }
+        }
+    }
+} 
