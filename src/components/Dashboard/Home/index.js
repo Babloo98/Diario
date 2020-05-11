@@ -4,11 +4,11 @@ import './style.scss';
 class Home extends React.Component{
     render(){
         return(
-            <React.Fragment>
-                <input placeholder="ENTER TITLE HERE" />
-                <input type="date" />
-                <textarea placeholder="Textarea"></textarea>
-            </React.Fragment>
+            <div className="dashboard">
+                <div className="input-wrap"><input placeholder="ENTER TITLE HERE" /></div>
+                <div className="input-wrap"><input type="date" className="diary-date" /></div>
+                <div className="diary-content"><textarea placeholder="ENTER YOU THOUGHTS"></textarea></div>
+            </div>
         )
     }
 };

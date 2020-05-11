@@ -1,0 +1,21 @@
+.dashboard{
+    height: 100%;
+    border: 1px solid #757373;
+    padding: 10px;
+    
+    textarea{
+        width: 100%;
+        border-radius: initial;
+        height: 100%;
+    }
+    input{
+        margin: 8px 0;
+    }
+    .input-wrap{
+        border-bottom: 1px solid #757373;
+    }
+    .diary-content{
+        margin-top: 8px;
+        height: calc(100% - 100px);
+    }
+}
