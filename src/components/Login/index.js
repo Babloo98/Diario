@@ -94,7 +94,7 @@ class Login extends Component {
     }
 
     render() {
-        const { loginModal, loginToggle, isLogin, registerToggle, isRegister, location } = this.props;
+        const { loginModal, loginToggle, isLogin, registerToggle, isRegister, location, redirectDashboard } = this.props;
         const { from } = location.state || { from: { pathname: '/Dashboard' } };
         if (this.state.redirect === true) return <Redirect to={from.pathname} />;
         return (
@@ -107,7 +107,8 @@ class Login extends Component {
                         </div>
                         <div className="form-wrapper">
                             <h2><span onClick={registerToggle}>Register</span> | <span onClick={loginToggle}>Login</span></h2>
-                            {isLogin &&
+                            {isLogin && (
+                                redirectDashboard ? <Redirect to="/Dashboard" /> :
                                 <form className="input-wrapper log" onSubmit={(e)=> this.loginSubmit(e)}>
                                     <input type="text" name="email" placeholder="Email" onChange={(e)=>this.handleLogin(e)}/>
                                     <input type="password" name="password" placeholder="Password" onChange={(e)=>this.handleLogin(e)}/>
@@ -115,6 +116,7 @@ class Login extends Component {
                                         <button type="submit">Submit</button>
                                     </div>
                                 </form>
+                                )
                             }
                             {isRegister && 
                                 <form className="input-wrapper" onSubmit={(e)=> this.registerSubmit(e)}>

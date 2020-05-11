@@ -1,6 +1,7 @@
 import React from 'react';
 import Login from '../Login';
 import './homepage.scss';
+import {getLocalstorage} from "../../helper";
 
 class Homepage extends React.Component{
 
@@ -9,7 +10,8 @@ class Homepage extends React.Component{
         this.state={
             isModalOpen: false,
             isLogin: false,
-            isRegister: true
+            isRegister: true,
+            redirectDashboard: false
         };
     };
 
@@ -20,10 +22,20 @@ class Homepage extends React.Component{
     };
 
     loginToggle = () =>{
-        this.setState({
-            isLogin: true,
-            isRegister: false
-        });
+        if(getLocalstorage("user_data")){
+            this.setState({
+                isLogin: true,
+                isRegister: false,
+                redirectDashboard: true
+            });
+        } 
+        else{
+            this.setState({
+                isLogin: true,
+                isRegister: false,
+                redirectDashboard: false
+            });
+        }
     }
 
     registerToggle = () =>{
@@ -34,7 +46,7 @@ class Homepage extends React.Component{
     }
 
     render(){
-        const { isModalOpen, isLogin, isRegister } = this.state;
+        const { isModalOpen, isLogin, isRegister, redirectDashboard } = this.state;
         return(
             <div className="homepage-wrapper">
                 <div className="homepage">
@@ -120,6 +132,7 @@ class Homepage extends React.Component{
                         registerToggle={this.registerToggle}
                         isLogin={isLogin}
                         isRegister={isRegister}
+                        redirectDashboard={redirectDashboard}
                     />
                 }
             </div>    
